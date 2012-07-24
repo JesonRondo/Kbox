@@ -1,0 +1,82 @@
+.kboxmask {
+    /*
+        height: 100%;
+     */
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    _width: 102%;
+    opacity: .2;
+    background: #000;
+    z-index: 9999998;
+    position: absolute;
+}
+.kboxcnt {
+    /*
+        width: 400px;
+        height: 200px;
+        margin: -100px 0 0 -200px;
+     */
+    top: 50%;
+    left: 50%;
+    padding: 0;
+    z-index: 9999999;
+    background: #fff;
+    position: absolute;
+    border-radius: 4px;
+    box-shadow: 0 0 25px #666;
+    border: 2px solid rgb(130, 130, 130);
+}
+.kboxcnt .kboxheader {
+    color: #333;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    border-radius: 4px 4px 0 0;
+    background: rgb(243, 243, 243);
+}
+.kboxcnt .kboxheader h5 {
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0 30px 0 10px;
+}
+.kboxcnt .kboxheader .kboxclose {
+    top: 0;
+    right: 10px;
+    color: #333;
+    width: 14px;
+    outline: none;
+    display: block;
+    font-size: 14px;
+    line-height: 30px;
+    position: absolute;
+    font-family: Simsun;
+    text-decoration: none;
+    transition: transform 0.4s ease-out;
+    -moz-transition: -moz-transform 0.4s ease-out;
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+}
+.kboxcnt .kboxheader .kboxclose:hover {
+    color: rgb(7,172,224);
+    text-shadow: 0 0 1px #333;
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+.kboxcnt .kboxinfo {
+    /*
+        height: 170px;
+     */
+    width: 100%;
+    border-radius: 0 0 4px 4px;
+}
+.singleline {
+    overflow: hidden;
+    white-space: nowrap;
+    word-break: break-all;
+    text-overflow: ellipsis;
+}

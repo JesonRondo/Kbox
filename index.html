@@ -1,0 +1,45 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/jquery.kbox.css" />
+    <title></title>
+</head>
+<body>
+    <button id="openkbox">click me</button>
+        
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.kbox.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var $dom = "<p>Hello world!!</p>"
+                     + "<p>Hello world!!</p>"
+                     + "<button id='change'>Change</button>"
+                     + "<button id='ok'>Ok</button>";
+                     
+            var $dom2 = "<p>Fuck world!!</p>"
+                     + "<p>Fuck world!!</p>"
+                     + "<button id='change'>Change</button>"
+                     + "<button id='ok'>Ok</button>";
+                  
+            $("#change").live("click", function() {
+                $(document).animateKbox($dom2, {
+                    width:  250,
+                    height: 200
+                });
+            });   
+            $("#ok").live("click", function() {
+                $(document).closeKbox();
+            });
+                  
+            $("#openkbox").click(function() {
+                $(document).openKbox($dom, {
+                    title:  "测试弹出框",
+                    width:  450,
+                    height: 300
+                });
+            });
+        });
+    </script>
+</body>
+</html>
