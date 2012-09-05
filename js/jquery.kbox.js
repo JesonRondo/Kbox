@@ -62,10 +62,14 @@
                 var winHeight = $(window).height();
                 var docHeight = $(document).height();
                 var docWidth  = $(document).width();
+                var scrollTop = $(window).scrollTop();
                 
                 $(".kboxmask").css({
                     "height": (winHeight > docHeight ? winHeight : docHeight) + "px",
                     "width" : docWidth + "px"
+                });
+                $(".kboxcnt").css({
+                    "top": scrollTop + winHeight/2
                 });
             }).resize();
             $(".kboxcnt").css({
@@ -99,6 +103,9 @@
         }, options);
         
         var animateBox = function() {
+            var scrollTop = $(window).scrollTop();
+            var winHeight = $(window).height();
+                
             $(".kboxheader:eq(0) h5").text(settings.title);
             
             $(".kboxinfo:eq(0)").html($dom);
@@ -107,7 +114,8 @@
                 "width": settings.width,
                 "height": settings.height,
                 "marginTop": -settings.height/2,
-                "marginLeft": -settings.width/2
+                "marginLeft": -settings.width/2,
+                "top": scrollTop + winHeight/2
             });
         };
         
